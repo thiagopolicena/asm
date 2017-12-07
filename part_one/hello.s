@@ -1,3 +1,7 @@
+	;; nasm -f elf64 hello.s
+	;; ld -s -o hello hello.o
+	;; sudo apt install nasm fasm
+
 	section .data
 hello:	 db 'Hello World', 10
 helloLen:	equ $-hello
@@ -16,4 +20,3 @@ _start:
 	mov eax,1
 	mov ebx,0
 	int 80h
-	
